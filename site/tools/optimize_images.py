@@ -18,7 +18,7 @@ OUT = ROOT / "public" / "img"
 # 网站文件名 -> 原图
 PHOTOS = {
     "hero": "IMG_5973.HEIC",            # SESI 现场，孩子戴气球皇冠
-    "romeo": "3043cb78d123137e348d5e862fde32.jpg",  # 小丑装全身
+    "romeo": "IMG_4811.HEIC",           # 品牌快闪站台全身照（关于区主形象）
     "svc-kids": "IMG_5966.HEIC",        # SESI 现场制作
     "svc-giant": "6bc5695ba87cd7f104ceab60daae70.jpg",  # 发光大型造型
     "svc-decor": "15580542ba839832652ef10222a2ab.jpg",  # 装饰场景 + 气球伞
@@ -31,7 +31,7 @@ PHOTOS = {
     "g-mascot": "af49d1bed752417f6ab5c40c460c16.jpg",
     "g-tigers": "bc1b5c17e3c96ab3193eff73df6e49.jpg",
     "g-show": "c33e3907c03c80ce0c79626f4cf167.jpg",
-    "g-studio": "e572d38d0cc4d45aeaacf75b6873d0.jpg",
+    "g-pose": "3043cb78d123137e348d5e862fde32.jpg",
 }
 WIDTHS = (800, 1600)
 QUALITY = 78

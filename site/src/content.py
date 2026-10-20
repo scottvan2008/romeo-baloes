@@ -17,7 +17,7 @@ LANGS = {
 
 # 服务卡片图片（顺序与文案一致）
 SERVICE_IMAGES = ["svc-kids", "svc-giant", "svc-decor", "svc-business", "svc-seasonal"]
-GALLERY_IMAGES = ["g-sesi", "g-crown", "g-party", "g-show", "g-tigers", "g-mascot", "g-lobby", "g-studio"]
+GALLERY_IMAGES = ["g-sesi", "g-crown", "g-party", "g-show", "g-tigers", "g-mascot", "g-lobby", "g-pose"]
 
 CONTENT = {
     # ------------------------------------------------------------------ PT
