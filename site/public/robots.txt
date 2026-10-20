@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://romeobaloes.com/sitemap.xml
+Sitemap: https://romeo-baloes.vercel.app/sitemap.xml

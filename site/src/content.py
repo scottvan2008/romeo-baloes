@@ -1,6 +1,6 @@
 """网站全部文案（PT / EN / 中文）。改文字只改这里，然后运行 python build.py。"""
 
-SITE_URL = "https://romeobaloes.com"
+SITE_URL = "https://romeo-baloes.vercel.app"  # 买好 romeobaloes.com 后改回
 WHATSAPP = "5511911379644"
 WHATSAPP_DISPLAY = "+55 11 91137-9644"
 INSTAGRAM = "https://www.instagram.com/romeo.baloes"
