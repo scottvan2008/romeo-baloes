@@ -1,0 +1,5 @@
+# 原图（含 GPS 等拍摄信息），只上传压缩后的 site/public/img
+活动照/
+.claude/
+.vercel/
+__pycache__/
