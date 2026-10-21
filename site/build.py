@@ -2,6 +2,7 @@
 
 用法：python build.py
 """
+import hashlib
 import json
 from datetime import date
 from html import escape
@@ -22,14 +23,20 @@ WECHAT_ICON = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fil
 LOGO = '<svg class="logo-mark" viewBox="0 0 32 40" aria-hidden="true"><ellipse cx="16" cy="15" rx="12" ry="14" fill="#FF4D5E"/><ellipse cx="11.5" cy="10" rx="3" ry="4.5" fill="#fff" opacity=".35"/><path d="M14 29h4l-2 3z" fill="#FF4D5E"/><path d="M16 32c-2 3 2 4 0 8" stroke="#FFC93C" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>'
 
 
+def v(path: str) -> str:
+    """给 public/ 下的文件加内容版本号，文件一变网址就变，浏览器不会用旧缓存。"""
+    digest = hashlib.md5((PUBLIC / path).read_bytes()).hexdigest()[:8]
+    return f"{path}?v={digest}"
+
+
 def wa_link(text: str) -> str:
     return f"https://wa.me/{WHATSAPP}?text={quote(text)}"
 
 
 def img(name: str, alt: str, prefix: str, sizes: str, cls: str = "", eager: bool = False) -> str:
     loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
-    return (f'<img class="{cls}" src="{prefix}img/{name}-800.webp" '
-            f'srcset="{prefix}img/{name}-800.webp 800w, {prefix}img/{name}-1600.webp 1600w" '
+    return (f'<img class="{cls}" src="{prefix}{v(f"img/{name}-800.webp")}" '
+            f'srcset="{prefix}{v(f"img/{name}-800.webp")} 800w, {prefix}{v(f"img/{name}-1600.webp")} 1600w" '
             f'sizes="{sizes}" alt="{escape(alt)}" {loading}>')
 
 
@@ -96,7 +103,7 @@ def render(lang: str) -> str:
     why = "".join(f'<li class="reveal"><span class="why-ico" aria-hidden="true">{ic}</span>{e(t)}</li>' for ic, t in c["why"])
 
     gallery = "".join(
-        f'<button class="g-item reveal" type="button" data-full="{prefix}img/{name}-1600.webp" aria-label="{e(c["gallery_alt"])}">'
+        f'<button class="g-item reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(c["gallery_alt"])}">'
         f'{img(name, c["gallery_alt"], prefix, "(min-width: 900px) 25vw, 50vw")}</button>'
         for name in GALLERY_IMAGES
     )
@@ -146,7 +153,7 @@ def render(lang: str) -> str:
 <meta property="og:title" content="{e(c["title"])}">
 <meta property="og:description" content="{e(c["description"])}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE_URL}/og-image.jpg">
+<meta property="og:image" content="{SITE_URL}/{v("og-image.jpg")}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="{c["og_locale"]}">
@@ -155,8 +162,8 @@ def render(lang: str) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
-<link rel="preload" as="image" href="{prefix}img/hero-800.webp" imagesrcset="{prefix}img/hero-800.webp 800w, {prefix}img/hero-1600.webp 1600w" imagesizes="(min-width: 900px) 45vw, 100vw">
-<link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="preload" as="image" href="{prefix}{v("img/hero-800.webp")}" imagesrcset="{prefix}{v("img/hero-800.webp")} 800w, {prefix}{v("img/hero-1600.webp")} 1600w" imagesizes="(min-width: 900px) 45vw, 100vw">
+<link rel="stylesheet" href="{prefix}{v("assets/style.css")}">
 <script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">{jsonld(lang, c)}</script>
 </head>
@@ -293,7 +300,7 @@ def render(lang: str) -> str:
   <img alt="{e(c["gallery_alt"])}">
 </dialog>
 
-<script src="{prefix}assets/main.js" defer></script>
+<script src="{prefix}{v("assets/main.js")}" defer></script>
 </body>
 </html>
 '''
