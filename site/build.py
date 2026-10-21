@@ -9,7 +9,7 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote
 
-from src.content import (CONTENT, EMAIL, GALLERY_IMAGES, INSTAGRAM, LANGS, SERVICE_IMAGES, SITE_URL, TIKTOK, WORKS_IMAGES,
+from src.content import (CONTENT, EMAIL, GALLERY_IMAGES, INSTAGRAM, LANGS, SERVICE_IMAGES, SITE_URL, TIKTOK, TIKTOK_HANDLE, WORKS_IMAGES,
                          WECHAT, WHATSAPP, WHATSAPP_DISPLAY)
 
 ROOT = Path(__file__).resolve().parent
@@ -295,7 +295,7 @@ def render(lang: str) -> str:
     <ul class="contacts">
       <li><a href="{wa}" target="_blank" rel="noopener">{WA_ICON}{WHATSAPP_DISPLAY}</a></li>
       <li><a href="{INSTAGRAM}" target="_blank" rel="noopener">{IG_ICON}@romeo.baloes</a></li>
-      <li><a href="{TIKTOK}" target="_blank" rel="noopener">{TT_ICON}TikTok @romeo.baloes</a></li>
+      <li><a href="{TIKTOK}" target="_blank" rel="noopener">{TT_ICON}TikTok @{TIKTOK_HANDLE}</a></li>
       <li><a href="mailto:{EMAIL}">{MAIL_ICON}{EMAIL}</a></li>
       {f'<li><span>{WECHAT_ICON}{e(c["wechat_label"])} {WECHAT}</span></li>' if c["wechat_label"] else ''}
     </ul>

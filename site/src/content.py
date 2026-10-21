@@ -4,7 +4,8 @@ SITE_URL = "https://romeo-baloes.vercel.app"  # 买好 romeobaloes.com 后改回
 WHATSAPP = "5511920630591"
 WHATSAPP_DISPLAY = "+55 11 92063-0591"
 INSTAGRAM = "https://www.instagram.com/romeo.baloes"
-TIKTOK = "https://www.tiktok.com/@romeo.baloes"
+TIKTOK_HANDLE = "o.artista.romeu.no"
+TIKTOK = f"https://www.tiktok.com/@{TIKTOK_HANDLE}"
 EMAIL = "huan19921018@gmail.com"
 WECHAT = "L18819069313"
 
