@@ -171,6 +171,8 @@ def render(lang: str) -> str:
 <link rel="preload" as="image" href="{prefix}{v("img/hero-800.webp")}" imagesrcset="{prefix}{v("img/hero-800.webp")} 800w, {prefix}{v("img/hero-1200.webp")} 1200w, {prefix}{v("img/hero-1600.webp")} 1600w" imagesizes="(min-width: 900px) 45vw, 100vw">
 <link rel="stylesheet" href="{prefix}{v("assets/style.css")}">
 <script>document.documentElement.classList.add("js")</script>
+<script>window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{jsonld(lang, c)}</script>
 </head>
 <body class="lang-{lang}">
