@@ -9,7 +9,7 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote
 
-from src.content import (CONTENT, EMAIL, GALLERY_IMAGES, INSTAGRAM, LANGS, SERVICE_IMAGES, SITE_URL, TIKTOK,
+from src.content import (CONTENT, EMAIL, GALLERY_IMAGES, INSTAGRAM, LANGS, SERVICE_IMAGES, SITE_URL, TIKTOK, WORKS_IMAGES,
                          WECHAT, WHATSAPP, WHATSAPP_DISPLAY)
 
 ROOT = Path(__file__).resolve().parent
@@ -36,7 +36,7 @@ def wa_link(text: str) -> str:
 def img(name: str, alt: str, prefix: str, sizes: str, cls: str = "", eager: bool = False) -> str:
     loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     return (f'<img class="{cls}" src="{prefix}{v(f"img/{name}-800.webp")}" '
-            f'srcset="{prefix}{v(f"img/{name}-800.webp")} 800w, {prefix}{v(f"img/{name}-1600.webp")} 1600w" '
+            f'srcset="{prefix}{v(f"img/{name}-800.webp")} 800w, {prefix}{v(f"img/{name}-1200.webp")} 1200w, {prefix}{v(f"img/{name}-1600.webp")} 1600w" '
             f'sizes="{sizes}" alt="{escape(alt)}" {loading}>')
 
 
@@ -103,9 +103,15 @@ def render(lang: str) -> str:
     why = "".join(f'<li class="reveal"><span class="why-ico" aria-hidden="true">{ic}</span>{e(t)}</li>' for ic, t in c["why"])
 
     gallery = "".join(
-        f'<button class="g-item reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(c["gallery_alt"])}">'
-        f'{img(name, c["gallery_alt"], prefix, "(min-width: 900px) 25vw, 50vw")}</button>'
-        for name in GALLERY_IMAGES
+        f'<button class="g-item{" wide" if wide else ""} reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(c["gallery_alt"])}">'
+        f'{img(name, c["gallery_alt"], prefix, "(min-width: 900px) 50vw, 100vw" if wide else "(min-width: 900px) 25vw, 50vw")}</button>'
+        for name, wide in GALLERY_IMAGES
+    )
+
+    works = "".join(
+        f'<button class="g-item work reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(label)}">'
+        f'{img(name, label, prefix, "(min-width: 900px) 33vw, 50vw")}<span class="work-label">{e(label)}</span></button>'
+        for name, label in zip(WORKS_IMAGES, c["works"])
     )
 
     reviews = "".join(
@@ -162,7 +168,7 @@ def render(lang: str) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
-<link rel="preload" as="image" href="{prefix}{v("img/hero-800.webp")}" imagesrcset="{prefix}{v("img/hero-800.webp")} 800w, {prefix}{v("img/hero-1600.webp")} 1600w" imagesizes="(min-width: 900px) 45vw, 100vw">
+<link rel="preload" as="image" href="{prefix}{v("img/hero-800.webp")}" imagesrcset="{prefix}{v("img/hero-800.webp")} 800w, {prefix}{v("img/hero-1200.webp")} 1200w, {prefix}{v("img/hero-1600.webp")} 1600w" imagesizes="(min-width: 900px) 45vw, 100vw">
 <link rel="stylesheet" href="{prefix}{v("assets/style.css")}">
 <script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">{jsonld(lang, c)}</script>
@@ -222,6 +228,13 @@ def render(lang: str) -> str:
   <div class="wrap">
     <header class="section-head reveal"><p class="kicker">{e(c["services_kicker"])}</p><h2>{e(c["services_title"])}</h2></header>
     <div class="services">{services}</div>
+  </div>
+</section>
+
+<section class="section works-sec" id="works">
+  <div class="wrap">
+    <header class="section-head reveal"><p class="kicker">{e(c["works_kicker"])}</p><h2>{e(c["works_title"])}</h2><p>{e(c["works_intro"])}</p></header>
+    <div class="works">{works}</div>
   </div>
 </section>
 

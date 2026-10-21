@@ -74,6 +74,7 @@ p { margin: 0 0 1em; }
 .nav { display: flex; gap: 22px; }
 .nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px; }
 .nav a:hover { color: var(--text); }
+@media (min-width: 900px) and (max-width: 1099px) { .nav { gap: 14px; } .nav a { font-size: 14px; } }
 .header-right { display: flex; align-items: center; gap: 10px; }
 .lang-switch { display: inline-flex; flex: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
 .lang-switch a { text-decoration: none; font-size: 13px; font-weight: 700; line-height: 1.4; padding: 4px 10px; border-radius: 999px; color: var(--muted); white-space: nowrap; }
@@ -209,7 +210,29 @@ p { margin: 0 0 1em; }
 .g-item { padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 16px; overflow: hidden; }
 .g-item img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .4s ease; }
 .g-item:hover img { transform: scale(1.04); }
+.g-item.wide { grid-column: span 2; }
+.g-item.wide img { aspect-ratio: 8 / 5; }
 @media (min-width: 900px) { .gallery { grid-template-columns: repeat(4, 1fr); gap: 14px; } }
+
+/* works */
+.works-sec { padding-top: 0; }
+.works { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.work { position: relative; background: #fff; }
+.work img { aspect-ratio: 3 / 4; }
+.work:first-child { grid-column: span 2; }
+.work:first-child img { aspect-ratio: 4 / 3; object-fit: contain; background: #f6eef2; }
+.work-label {
+  position: absolute; left: 10px; bottom: 10px;
+  padding: 5px 12px; border-radius: 999px;
+  background: rgba(15, 18, 38, .78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  color: #fff; font-weight: 700; font-size: 14px; line-height: 1.3;
+}
+@media (min-width: 900px) {
+  .works { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .work:first-child { grid-column: auto; }
+  .work:first-child img { aspect-ratio: 3 / 4; object-fit: cover; background: none; }
+  .work-label { left: 14px; bottom: 14px; font-size: 15px; }
+}
 
 .lightbox { padding: 0; border: 0; background: transparent; max-width: 94vw; max-height: 92vh; }
 .lightbox::backdrop { background: rgba(5, 6, 15, .92); }

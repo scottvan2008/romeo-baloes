@@ -17,7 +17,15 @@ LANGS = {
 
 # 服务卡片图片（顺序与文案一致）
 SERVICE_IMAGES = ["svc-kids", "svc-giant", "svc-decor", "svc-business", "svc-seasonal"]
-GALLERY_IMAGES = ["g-sesi", "g-crown", "g-party", "g-show", "g-tigers", "g-mascot", "g-lobby", "g-pose"]
+# 活动现场画廊：(图片, 是否横图占两格)。顺序保证桌面 4 列、手机 2 列都排满
+GALLERY_IMAGES = [
+    ("g-party", True), ("g-sesi", False), ("g-crown", False),
+    ("g-night", False), ("g-show", False), ("g-mall", True),
+    ("g-market", True), ("g-mascot", False), ("g-guitar", False),
+    ("g-lobby", False), ("g-pose", False), ("g-tigers", True),
+]
+# 作品区（顺序与各语言 works 文案一一对应）
+WORKS_IMAGES = ["w-gown", "w-princess", "w-mermaid", "w-robot", "w-horse", "w-dress-doll", "w-doll", "w-theme", "w-mouse"]
 
 CONTENT = {
     # ------------------------------------------------------------------ PT
@@ -26,7 +34,7 @@ CONTENT = {
         "description": "Esculturas de balões ao vivo para festas infantis e eventos em São Paulo. 14 anos de experiência, mais de 100 esculturas no repertório. Peça seu orçamento pelo WhatsApp.",
         "og_locale": "pt_BR",
         "skip": "Pular para o conteúdo",
-        "nav": {"about": "Sobre", "services": "Serviços", "gallery": "Galeria", "reviews": "Depoimentos", "packages": "Pacotes", "faq": "Dúvidas"},
+        "nav": {"about": "Sobre", "services": "Serviços", "works": "Esculturas", "gallery": "Eventos", "reviews": "Depoimentos", "packages": "Pacotes", "faq": "Dúvidas"},
         "nav_cta": "WhatsApp",
         "menu": "Menu",
         "hero_eyebrow": "Escultor de balões · São Paulo",
@@ -59,6 +67,10 @@ CONTENT = {
             ("Ativação ao vivo para lojas, restaurantes e espaços de festa", "Uma atração que atrai famílias, aumenta o tempo de permanência no local e gera conteúdo fotográfico para as redes sociais do seu negócio. Ideal para inaugurações, datas comemorativas e buffets infantis.", "Público reunido em evento comercial com Romeo"),
             ("Datas especiais", "Natal, Halloween e Dia das Crianças com esculturas temáticas e figurino de palhaço — para hotéis, lojas, condomínios e eventos de empresas.", "Romeo ao lado do Papai Noel em evento de Natal"),
         ],
+        "works_kicker": "Repertório",
+        "works_title": "Esculturas feitas por Romeo",
+        "works_intro": "Princesas, heróis, bichinhos e peças temáticas — uma amostra das mais de 100 esculturas do repertório.",
+        "works": ['Vestido de balões', 'Princesa', 'Sereia', 'Herói robô', 'Cavalinho', 'Princesa de vestido', 'Boneca oriental', 'Boneca temática', 'Ratinha de laço'],
         "why_kicker": "Diferenciais",
         "why_title": "Por que Romeo",
         "why": [
@@ -70,7 +82,7 @@ CONTENT = {
             ("📦", "Todos os materiais inclusos"),
             ("📸", "Esculturas que viram fotos e posts"),
         ],
-        "gallery_kicker": "Galeria",
+        "gallery_kicker": "Eventos",
         "gallery_title": "Momentos de festa",
         "gallery_alt": "Romeo em evento com esculturas de balões",
         "gallery_more": "Mais vídeos no Instagram",
@@ -121,7 +133,7 @@ CONTENT = {
         "description": "Live balloon sculptures for kids' parties and events in São Paulo. 14 years of experience, over 100 designs. Request a quote on WhatsApp.",
         "og_locale": "en_US",
         "skip": "Skip to content",
-        "nav": {"about": "About", "services": "Services", "gallery": "Gallery", "reviews": "Reviews", "packages": "Packages", "faq": "FAQ"},
+        "nav": {"about": "About", "services": "Services", "works": "Sculptures", "gallery": "Events", "reviews": "Reviews", "packages": "Packages", "faq": "FAQ"},
         "nav_cta": "WhatsApp",
         "menu": "Menu",
         "hero_eyebrow": "Balloon artist · São Paulo",
@@ -154,6 +166,10 @@ CONTENT = {
             ("Live activation for stores, restaurants and party venues", "An attraction that draws families in, keeps them on site longer and creates photo content for your business's social media. Ideal for grand openings, seasonal dates and kids' party venues.", "Crowd gathered at a commercial event with Romeo"),
             ("Seasonal events", "Christmas, Halloween and Children's Day with themed sculptures and clown costume — for hotels, stores, residential complexes and corporate events.", "Romeo next to Santa Claus at a Christmas event"),
         ],
+        "works_kicker": "Repertoire",
+        "works_title": "Sculptures by Romeo",
+        "works_intro": "Princesses, heroes, little animals and themed pieces — a sample of the 100+ sculptures in the repertoire.",
+        "works": ['Balloon gown', 'Princess', 'Mermaid', 'Robot hero', 'Pony', 'Princess in a gown', 'Oriental doll', 'Themed doll', 'Mouse with a bow'],
         "why_kicker": "Why Romeo",
         "why_title": "What makes it different",
         "why": [
@@ -165,7 +181,7 @@ CONTENT = {
             ("📦", "All materials included"),
             ("📸", "Sculptures made to be photographed and shared"),
         ],
-        "gallery_kicker": "Gallery",
+        "gallery_kicker": "Events",
         "gallery_title": "Party moments",
         "gallery_alt": "Romeo at an event with balloon sculptures",
         "gallery_more": "More videos on Instagram",
@@ -216,7 +232,7 @@ CONTENT = {
         "description": "圣保罗儿童派对与活动现场气球造型。14 年经验，100 多种造型，可用中文沟通。WhatsApp 或微信咨询报价。",
         "og_locale": "zh_CN",
         "skip": "跳到正文",
-        "nav": {"about": "关于", "services": "服务", "gallery": "作品", "reviews": "评价", "packages": "套餐", "faq": "常见问题"},
+        "nav": {"about": "关于", "services": "服务", "works": "作品", "gallery": "活动现场", "reviews": "评价", "packages": "套餐", "faq": "常见问题"},
         "nav_cta": "WhatsApp",
         "menu": "菜单",
         "hero_eyebrow": "气球造型艺术家 · 圣保罗",
@@ -249,6 +265,10 @@ CONTENT = {
             ("商场、餐厅、派对场地现场引流活动", "吸引家庭客流、延长顾客停留时间、为你的门店社交媒体提供拍照素材。适合开业、节日活动，也适合儿童派对场地作为增值项目推荐给客户。", "商业活动现场围观的人群"),
             ("节日专场", "圣诞、万圣节、儿童节主题造型 + 小丑装扮——适合酒店、商店、公寓社区和企业活动。", "Romeo 与圣诞老人在圣诞活动现场"),
         ],
+        "works_kicker": "作品",
+        "works_title": "Romeo 的气球造型",
+        "works_intro": "公主、英雄、小动物和各种主题造型——100 多种造型里的一小部分。",
+        "works": ['气球礼服', '公主', '美人鱼', '机器人英雄', '小马', '长裙公主', '古风娃娃', '主题娃娃', '蝴蝶结小老鼠'],
         "why_kicker": "为什么选 Romeo",
         "why_title": "和普通气球表演的不同",
         "why": [
@@ -260,7 +280,7 @@ CONTENT = {
             ("📦", "材料全包，您无需准备"),
             ("📸", "造型即拍照素材，自带传播"),
         ],
-        "gallery_kicker": "作品",
+        "gallery_kicker": "活动现场",
         "gallery_title": "派对现场",
         "gallery_alt": "Romeo 在活动现场与气球造型",
         "gallery_more": "更多视频请看 Instagram",
