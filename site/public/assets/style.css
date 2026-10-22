@@ -292,6 +292,10 @@ p { margin: 0 0 1em; }
 .contacts a, .contacts span { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--muted); word-break: break-all; }
 .contacts a:hover { color: var(--text); }
 .footer-bottom { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.credit { white-space: nowrap; }
+.credit a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.credit a:hover { color: var(--text); }
+@media (max-width: 640px) { .credit { display: block; margin-top: 4px; } .credit .sep { display: none; } }
 @media (min-width: 900px) { .footer-inner { grid-template-columns: 1fr auto; } }
 
 /* floating whatsapp */
