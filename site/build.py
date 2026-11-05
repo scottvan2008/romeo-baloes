@@ -303,7 +303,7 @@ def render(lang: str) -> str:
     </ul>
   </div>
   <div class="wrap footer-bottom">
-    <span>© {year} Romeo Balões. {e(c["footer_rights"])}</span>
+    <span>© {year} Romeo Balões. {e(c["footer_rights"])} <span class="credit"><span class="sep">· </span>{e(c["credit_before"])}<a href="{c["credit_url"]}" target="_blank" rel="noopener">OlaPage</a>{e(c["credit_after"])}</span></span>
     <div class="lang-switch">{lang_switch}</div>
   </div>
 </footer>

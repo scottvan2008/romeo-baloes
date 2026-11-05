@@ -1,8 +1,8 @@
 """网站全部文案（PT / EN / 中文）。改文字只改这里，然后运行 python build.py。"""
 
 SITE_URL = "https://romeo-baloes.vercel.app"  # 买好 romeobaloes.com 后改回
-WHATSAPP = "5511920630591"
-WHATSAPP_DISPLAY = "+55 11 92063-0591"
+WHATSAPP = "5511985057431"
+WHATSAPP_DISPLAY = "+55 11 98505-7431"
 INSTAGRAM = "https://www.instagram.com/romeo.baloes"
 TIKTOK_HANDLE = "o.artista.romeu.no"
 TIKTOK = f"https://www.tiktok.com/@{TIKTOK_HANDLE}"
@@ -123,6 +123,9 @@ CONTENT = {
         "wa_float": "Falar no WhatsApp",
         "footer_tag": "Esculturas de balões ao vivo · São Paulo e região",
         "footer_rights": "Todos os direitos reservados.",
+        "credit_before": "Site feito por ",
+        "credit_after": "",
+        "credit_url": "https://olapage.com/pt/",
         "wechat_label": "",
         "copy": "Copiar",
         "copied": "Copiado!",
@@ -222,6 +225,9 @@ CONTENT = {
         "wa_float": "Message on WhatsApp",
         "footer_tag": "Live balloon sculptures · São Paulo and region",
         "footer_rights": "All rights reserved.",
+        "credit_before": "Website by ",
+        "credit_after": "",
+        "credit_url": "https://olapage.com/",
         "wechat_label": "",
         "copy": "Copy",
         "copied": "Copied!",
@@ -321,6 +327,9 @@ CONTENT = {
         "wa_float": "WhatsApp 联系",
         "footer_tag": "现场气球造型 · 圣保罗及周边",
         "footer_rights": "版权所有。",
+        "credit_before": "网站由 ",
+        "credit_after": " 制作",
+        "credit_url": "https://olapage.com/zh/",
         "wechat_label": "微信",
         "copy": "复制",
         "copied": "已复制！",
