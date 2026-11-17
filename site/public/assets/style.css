@@ -246,12 +246,14 @@ p { margin: 0 0 1em; }
 .review { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; position: relative; display: flex; flex-direction: column; }
 .review::before { content: "“"; position: absolute; top: -6px; right: 22px; font: 700 110px/1 var(--head); color: var(--coral); opacity: .35; }
 .review blockquote { margin: 0 0 12px; font-family: var(--head); font-size: 21px; line-height: 1.4; font-weight: 500; }
-.review:first-child blockquote { font-size: 24px; }
+.review:first-child blockquote { font-size: 19px; }
 .review-tr { color: var(--muted); font-size: 15px; }
 .review figcaption { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-direction: column; font-size: 15px; }
 .review figcaption span { color: var(--muted); }
 @media (min-width: 900px) {
   .reviews { grid-template-columns: 1.3fr 1fr 1fr; }
+  .review:first-child { grid-column: 1 / -1; }
+  .review:first-child blockquote { font-size: 22px; }
 }
 
 /* packages */

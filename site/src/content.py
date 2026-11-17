@@ -96,6 +96,7 @@ CONTENT = {
         "reviews_kicker": "Depoimentos",
         "reviews_title": "O que dizem sobre o Romeo",
         "reviews": [
+            ('Contratei o Romeo Balões como atração da festa de 3 anos do meu filho e foi demais! Todos os convidados ficaram encantados com as esculturas que ele faz. Fizeram muito sucesso. Tivemos guarda-chuvas, coroas, animais, espadas elaboradas, entre outros! A fila para pedir balões e acompanhar a elaboração das esculturas tinha desde crianças pequenas, adolescentes e até adultos! Demais. Parabéns pelo seu trabalho.', '', 'Camila Calvi', 'Avaliação no Google ★★★★★ · Festa de 3 anos'),
             ("Seu trabalho encantou nossas crianças e famílias, e a atração foi um grande sucesso!", "", "Coordenação de Qualidade de Vida", "SESI Vila Leopoldina"),
             ("As portas estarão sempre abertas para você.", "", "Equipe do evento", "SESI Vila Leopoldina"),
             ("Que trabalho maravilhoso! Ficamos encantados com seu talento. Sucesso! ❤️", "", "Comentário no Instagram", "Vídeo do SESI Diverte"),
@@ -203,6 +204,7 @@ CONTENT = {
         "reviews_kicker": "Reviews",
         "reviews_title": "What people say",
         "reviews": [
+            ('Contratei o Romeo Balões como atração da festa de 3 anos do meu filho e foi demais! Todos os convidados ficaram encantados com as esculturas que ele faz. Fizeram muito sucesso. Tivemos guarda-chuvas, coroas, animais, espadas elaboradas, entre outros! A fila para pedir balões e acompanhar a elaboração das esculturas tinha desde crianças pequenas, adolescentes e até adultos! Demais. Parabéns pelo seu trabalho.', "“I hired Romeo Balões as the entertainment for my son's 3rd birthday party and it was amazing! All the guests loved his sculptures — a huge hit. We had umbrellas, crowns, animals, elaborate swords and more! The line to ask for balloons and watch the sculptures being made had little kids, teenagers and even adults! Amazing. Congratulations on your work.”", 'Camila Calvi', 'Google review ★★★★★ · 3rd birthday party'),
             ("Seu trabalho encantou nossas crianças e famílias, e a atração foi um grande sucesso!", "“Your work delighted our children and families, and the attraction was a huge success!”", "Quality of Life Coordination", "SESI Vila Leopoldina"),
             ("As portas estarão sempre abertas para você.", "“Our doors will always be open to you.”", "Event team", "SESI Vila Leopoldina"),
             ("Que trabalho maravilhoso! Ficamos encantados com seu talento. Sucesso! ❤️", "“What wonderful work! We were amazed by your talent. Best of luck!”", "Instagram comment", "SESI Diverte video"),
@@ -310,6 +312,7 @@ CONTENT = {
         "reviews_kicker": "评价",
         "reviews_title": "大家怎么说",
         "reviews": [
+            ('Contratei o Romeo Balões como atração da festa de 3 anos do meu filho e foi demais! Todos os convidados ficaram encantados com as esculturas que ele faz. Fizeram muito sucesso. Tivemos guarda-chuvas, coroas, animais, espadas elaboradas, entre outros! A fila para pedir balões e acompanhar a elaboração das esculturas tinha desde crianças pequenas, adolescentes e até adultos! Demais. Parabéns pelo seu trabalho.', '“我请 Romeo Balões 来儿子的 3 岁生日派对表演，效果太棒了！所有客人都被他的气球造型迷住了，非常受欢迎。有雨伞、皇冠、小动物、精致的宝剑等等！排队要气球、围观他现场制作的，有小朋友、青少年，甚至还有大人！太棒了，为你的作品点赞。”', 'Camila Calvi', 'Google 五星评价 ★★★★★ · 3 岁生日派对'),
             ("Seu trabalho encantou nossas crianças e famílias, e a atração foi um grande sucesso!", "“您的作品让我们的孩子和家庭着迷，这个节目大获成功！”", "生活质量协调部", "SESI Vila Leopoldina"),
             ("As portas estarão sempre abertas para você.", "“我们的大门永远为您敞开。”", "活动团队", "SESI Vila Leopoldina"),
             ("Que trabalho maravilhoso! Ficamos encantados com seu talento. Sucesso! ❤️", "“太棒的作品了！你的才华让我们着迷。祝成功！”", "Instagram 评论", "SESI Diverte 表演视频"),
