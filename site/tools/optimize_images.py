@@ -37,6 +37,9 @@ PHOTOS = {
     "g-market": "活动照/IMG_4751.JPG",
     "g-night": "活动照/IMG_5172.HEIC",
     "g-guitar": "作品照/c7cd3497f90f147766a689aae9c9a3.jpg",
+    "g-family": "活动照/IMG_6993.HEIC",            # Perdizes 3 岁生日，全家合影
+    "g-umbrella": "活动照/perdizes-umbrella.jpg",  # 三个小女孩举气球伞
+    "g-circle": "活动照/perdizes-circle.jpg",      # 小朋友围坐，吉他手 + 气球伞
     # 作品区
     "w-princess": "作品照/IMG_4168.HEIC",
     "w-robot": "作品照/IMG_4173.HEIC",

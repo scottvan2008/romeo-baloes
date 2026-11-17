@@ -20,6 +20,7 @@ LANGS = {
 SERVICE_IMAGES = ["svc-kids", "svc-giant", "svc-decor", "svc-business", "svc-seasonal"]
 # 活动现场画廊：(图片, 是否横图占两格)。顺序保证桌面 4 列、手机 2 列都排满
 GALLERY_IMAGES = [
+    ("g-family", False), ("g-circle", False), ("g-umbrella", True),
     ("g-party", True), ("g-sesi", False), ("g-crown", False),
     ("g-night", False), ("g-show", False), ("g-mall", True),
     ("g-market", True), ("g-mascot", False), ("g-guitar", False),
@@ -87,6 +88,11 @@ CONTENT = {
         "gallery_title": "Momentos de festa",
         "gallery_alt": "Romeo em evento com esculturas de balões",
         "gallery_more": "Mais vídeos no Instagram",
+        "gallery_captions": {
+            "g-family": "Aniversário de 3 anos em Perdizes 🎈",
+            "g-umbrella": "O guarda-chuva foi o queridinho da festa! ☂️🎈",
+            "g-circle": "A festa toda reunida para ver os balões 🎈",
+        },
         "reviews_kicker": "Depoimentos",
         "reviews_title": "O que dizem sobre o Romeo",
         "reviews": [
@@ -189,6 +195,11 @@ CONTENT = {
         "gallery_title": "Party moments",
         "gallery_alt": "Romeo at an event with balloon sculptures",
         "gallery_more": "More videos on Instagram",
+        "gallery_captions": {
+            "g-family": "3rd birthday party in Perdizes 🎈",
+            "g-umbrella": "The umbrella was the star of the party! ☂️🎈",
+            "g-circle": "The whole party gathered to watch the balloons 🎈",
+        },
         "reviews_kicker": "Reviews",
         "reviews_title": "What people say",
         "reviews": [
@@ -291,6 +302,11 @@ CONTENT = {
         "gallery_title": "派对现场",
         "gallery_alt": "Romeo 在活动现场与气球造型",
         "gallery_more": "更多视频请看 Instagram",
+        "gallery_captions": {
+            "g-family": "Perdizes 的 3 岁生日派对 🎈",
+            "g-umbrella": "气球雨伞是全场最受欢迎的！☂️🎈",
+            "g-circle": "大家围坐在一起看气球 🎈",
+        },
         "reviews_kicker": "评价",
         "reviews_title": "大家怎么说",
         "reviews": [

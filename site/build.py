@@ -102,11 +102,14 @@ def render(lang: str) -> str:
 
     why = "".join(f'<li class="reveal"><span class="why-ico" aria-hidden="true">{ic}</span>{e(t)}</li>' for ic, t in c["why"])
 
-    gallery = "".join(
-        f'<button class="g-item{" wide" if wide else ""} reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(c["gallery_alt"])}">'
-        f'{img(name, c["gallery_alt"], prefix, "(min-width: 900px) 50vw, 100vw" if wide else "(min-width: 900px) 25vw, 50vw")}</button>'
-        for name, wide in GALLERY_IMAGES
-    )
+    def gallery_item(name: str, wide: bool) -> str:
+        cap = c["gallery_captions"].get(name, "")
+        alt = cap or c["gallery_alt"]
+        label = f'<span class="work-label g-label">{e(cap)}</span>' if cap else ""
+        return (f'<button class="g-item{" wide" if wide else ""} reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(alt)}">'
+                f'{img(name, alt, prefix, "(min-width: 900px) 50vw, 100vw" if wide else "(min-width: 900px) 25vw, 50vw")}{label}</button>')
+
+    gallery = "".join(gallery_item(name, wide) for name, wide in GALLERY_IMAGES)
 
     works = "".join(
         f'<button class="g-item work reveal" type="button" data-full="{prefix}{v(f"img/{name}-1600.webp")}" aria-label="{e(label)}">'
